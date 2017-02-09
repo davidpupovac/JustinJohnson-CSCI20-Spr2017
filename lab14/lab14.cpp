@@ -20,7 +20,7 @@ int main(){
     cin >> userCents;
     cout << " You put you have " << userCents << " cents" <<  endl;
     
-   int amountBack = userCents - (userCents / userFee);
+   int amountBack = userCents- ((userCents /100) * userFee);
    int allQuarters = (userCents / 25);
    int allDimes =   (userCents % 25) / 10;
    int allNickels = ((userCents % 25) % 10) /5;
