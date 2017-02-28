@@ -10,7 +10,7 @@ using namespace std;
 void randomNumbers(int &upperLimit,int &lowerLimit, int &randNum) {   // will genrate random numbers
      
        srand(time(0));
-      randNum = lowerLimit + rand() % upperLimit;   // gernrate random number between lower and upper limits
+      randNum = (rand() % (upperLimit - lowerLimit + 1)) + lowerLimit;    // gernrate random number between lower and upper limits
       cout << " your random number between " << lowerLimit <<  " and " << upperLimit << " is after being swaped is " << randNum;
      }  
 void numSwap(int &lowerLimit, int &upperLimit){  // will swap the upper and lower limits 
