@@ -1,6 +1,6 @@
 // created by Justin Johnson
 // created on 2/27/17
-// will be swaping inputed numbers and generating a randome number from those numbers.
+// will be swaping inputed numbers and generating a randome number from those numbers. lab 2.3
 
 #include <iostream>
 #include <cstdlib>
