@@ -9,9 +9,9 @@ using namespace std;
 
 void randomNumbers() {  // generates random nuumbers
     
-    rand();
+    srand(time(0));
     cout << "Your random number is ";
-    cout << 1 + rand() % 100;
+    cout << 1+ rand() % 100;
 }
 
 
