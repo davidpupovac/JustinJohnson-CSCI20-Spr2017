@@ -65,7 +65,7 @@ return kiloGrams;
 
 double kiloGramToPounds(double kiloGrams, double randNum){  // will take kg and convert back to pounds
   double pounds =  kiloGrams * 2.20462;
-  cout << " From " << kiloGrams << " back to pounds we have " << pounds << "." << endl; 
+  cout << " From " << kiloGrams << " kg back to pounds we have " << pounds << "ponds." << endl; 
    return pounds;
     
 }
