@@ -21,6 +21,11 @@ void numSwap(int &lowerLimit, int &upperLimit){  // will swap the upper and lowe
     cout << " The lower limit after being swaped is " << lowerLimit << ". The upper Limit after being swaped is " << upperLimit << endl;
      }
      
+ int pToKg(int randNum){
+    cout << " Hello " << randNum;
+
+}
+     
 int main(){
     
     int upperLimit , lowerLimit;
@@ -37,18 +42,7 @@ int main(){
     
     randomNumbers(lowerLimit,upperLimit,randNum);  // function for generating a random numnber
      
+  pToKg(randNum);
+ 
      return 0;
 }
-
-
-
-
-
-
-    
-    
-
-
-    
-    
-    
