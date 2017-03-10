@@ -1,6 +1,6 @@
 // created by Justin Johnson
 // created on 2/27/17
-//  creating book informationwith class and objects
+//  creating book information with class and objects
 
 #include <iostream>
 #include <string>
@@ -61,14 +61,15 @@ string Book::GetGenreOfBook() {
 }
 
 int main(){
-    Book bookOne;    // geting info from the class Book
-    Book bookTwo;
-    Book bookThree;
-    Book bookFour;
-    Book bookFive;
+    Book bookinfo;
+    
+    string bookOne;  
+    string bookAuthor;
+    string bookCopyRight;
+    string bookGenre;
+    string bookAgeGroup;
     
     cout << " Please enter the title of the book. " << endl;
-    getline(cin, bookOne.SetBookTitle());
+    getline(cin, );
 
-  
 }
