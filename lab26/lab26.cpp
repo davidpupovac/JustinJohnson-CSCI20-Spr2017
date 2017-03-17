@@ -1,6 +1,6 @@
 /* Created By: justin johnson
  * Created On: 3/9/2017
- * This program will run the Temperature Converter Class
+ * This program will convert temputres from kelvin, celcius and Fahrenheit using objects and classS
  */
  
 #include <iostream>
@@ -10,54 +10,61 @@ using namespace std;
 
 class TemperatureConverter {
     public:
-    double SetTempFromKelvin(double kelvinTemp);
-    double SetTempFromCelsius(double celsiusTemp, double kelvinTocelsius);
-    double SetTempFromFahrenheit(double fahrTemp);
+    void SetTempFromKelvin(double kelvinTemp);
+    void SetTempFromCelsius(double celsiusTemp);
+    void SetTempFromFahrenheit(double fahrTemp);
+    void PrintTemperatures();
+    
     TemperatureConverter();  // default constructor
-    TemperatureConverter(double kelvin);
+    TemperatureConverter(double kelvinTemp);
     
     double GetTempFromKelvin();
     double GetTempAsCelsius(); 
     double GetTempAsFahrenheit();
     
     private:
-    double kelvin_ = 0.0;
+    double kelvin_;
 };
-TemperatureConverter::TemperatureConverter(){
-    kelvin_ = 0;
-    return;
+TemperatureConverter::TemperatureConverter(){  // default constuctor 
+    kelvin_ = 0.0;
 }
-TemperatureConverter::TemperatureConverter(double kelvin){
-    kelvin_ = kelvin;
+TemperatureConverter::TemperatureConverter(double kelvinTemp){
+    kelvin_ = kelvinTemp;
     return;
     
 }
 
-double TemperatureConverter::SetTempFromKelvin(double kelvinTemp){
+void TemperatureConverter::SetTempFromKelvin(double kelvinTemp){
     kelvin_ = kelvinTemp;
 }
 
-double TemperatureConverter::SetTempFromCelsius(double celsiusTemp, double kelvinTocelsius){
-    kelvin_ = celsiusTemp;
-    kelvinTocelsius = 0.0;
-    kelvinTocelsius = (celsiusTemp + 273.15); 
+void TemperatureConverter::SetTempFromCelsius(double celsiusTemp){
+    kelvin_ = (celsiusTemp + 273.15); 
 }
 
-double TemperatureConverter::SetTempFromFahrenheit(double fahrTemp){
-    kelvin_ = fahrTemp;
-    double kelvinToFahrenheit = 0.0;
-    kelvinToFahrenheit = (5*((fahrTemp-32) / (9)) +273.15);
+void TemperatureConverter::SetTempFromFahrenheit(double fahrTemp){
+   kelvin_ = (5 * (fahrTemp - 32) / 9) + 273.15;
+}
+double TemperatureConverter::GetTempFromKelvin() {
+    return kelvin_;
 }
 
 double TemperatureConverter::GetTempAsCelsius(){
-    return kelvinTocelsius - 273.15;
+    return kelvin_;
 }
 double TemperatureConverter::GetTempAsFahrenheit(){
-    return((kelvinTocelsius*9) / 5+ 32);
+return kelvin_;
 }
 void TemperatureConverter::PrintTemperatures(){
-    
-    
+  cout<<"Kelvin: "
+     <<GetTempFromKelvin()
+     <<endl
+     <<"Celsius: "
+ <<GetTempAsCelsius()
+     <<endl
+     <<"Fahrenheit: "
+     <<GetTempAsFahrenheit()
+     <<endl;
 }
 
 
