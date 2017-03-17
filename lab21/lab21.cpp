@@ -1,6 +1,6 @@
 // created by Justin Johnson
 // created on 2/21/17
-// 
+// this program will take two formulas for windchill and take the differnce between them
 
 #include <iostream>
 #include <string>
