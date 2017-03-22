@@ -67,7 +67,6 @@ void TemperatureConverter::PrintTemperatures(){
      <<endl;
 }
 
-
 int main(){
     TemperatureConverter temp1; //testing default constructor
     TemperatureConverter temp2(274); //testing overloaded constructor
