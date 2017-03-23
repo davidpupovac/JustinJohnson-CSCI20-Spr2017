@@ -19,19 +19,19 @@ class DistanceConversion  {
     double GetConversionToFeet();
     double GetConversionToInches();
     
-    void PrintDistance();
+    void PrintDistance();  // print function
     
-    DistanceConversion();
-    DistanceConversion(double Miles);
+    DistanceConversion();  // defalut constructor
+    DistanceConversion(double miles);
     
     private:
     double miles_;
 };
-DistanceConversion::DistanceConversion(){
+DistanceConversion::DistanceConversion(){  // default constructor
     miles_ = 0.0;
 }
 DistanceConversion::DistanceConversion(double miles){
-    miles = miles_;
+    miles_ = miles;
     return;
 }
 void DistanceConversion::SetConversionToMiles(double miles){
@@ -44,7 +44,7 @@ void DistanceConversion::SetConversionTofeet(double feet){
     miles_ = feet * 0.00018939;
 }
 void DistanceConversion::SetConversionToInches(double inches){
-    miles_ = inches * 0.000015783;
+    miles_ = inches * 63360;
 }
 double DistanceConversion::GetConversionToMiles(){
     return miles_;
