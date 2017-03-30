@@ -34,9 +34,9 @@ if((grossIncome >= 0) && (grossIncome <=  17850)){
              taxCalc  = grossIncome * .1;
              totalAdjusted = grossIncome - taxCalc;
          }
-else if((grossIncome >= 0) && (grossIncome <=  17850)){
+else if((grossIncome >= 17850) && (grossIncome <=  72500)){
              personalExempt = grossIncome - personalExempt;
-             taxCalc  = grossIncome * .1;
+             taxCalc  = grossIncome * .;
              totalAdjusted = grossIncome - taxCalc;
              
          }
