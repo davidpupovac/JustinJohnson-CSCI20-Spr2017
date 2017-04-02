@@ -7,45 +7,38 @@
 #include <ctime>
 using namespace std;
 
-    
-  
-
-
 int main(){
     int userNum;
     int i = 0;
       srand(time(0));
     int randomNumber = rand() % 50 +1;
     
-    cout << "Try to guess the random number within 10 tries. " << endl;
+    cout << "Try to guess the random number between 1 and 50 within 10 tries. " << endl;
     cin >> userNum; cout << endl;
     
 
-    for(i =0; i <= 10; i++){
+
 while(randomNumber != userNum){
-        
+    
+     for(i =1; i <= 10; i++){
         if( randomNumber > userNum){
-            cout << "TOO LOW...Guess again.. " << endl;
+            cout << "TOO LOW...Guess again.. " << endl;  // indicates that guess is to low
          }
         else if (randomNumber < userNum){
-        cout << "TOO HIGH...Guess again. " << endl;
-         }
-         i = i +1; 
-         cout << "you have guessed " << i << " time(s) " << endl;
+        cout << "TOO HIGH...Guess again. " << endl; // indicates that guess is to high
+        }
          
-         cin >> userNum;
+         cout << "you have guessed " << i << " time(s) " << endl;   // out puts number of guesses
          
+         cin >> userNum; // lets user re enter another number
          
-    } //closes while loop
-    } // closes for loop
-    
-    
-    if( randomNumber = userNum){
+             if( randomNumber == userNum){    // lets user know if number guessed is correct
         cout << "JUST RIGHT! " << endl;
+        return 0;
     }
     
+    } //closes for loop
     
-    
-
     return 0;
+}
 };
