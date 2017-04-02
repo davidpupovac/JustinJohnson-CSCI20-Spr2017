@@ -1,7 +1,6 @@
 // created by Justin Johnson
 // created on 3/30/17
-// 
-// 10 gueesses 
+// create a number guesseing game with 2 loops and random number genrator 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -40,5 +39,5 @@ while(randomNumber != userNum){
     } //closes for loop
     
     return 0;
-}
+} // closes while loop
 };
