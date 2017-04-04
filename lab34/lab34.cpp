@@ -1,6 +1,7 @@
 // created by Justin Johnson
 // created on 3/30/17
 // create a number guesseing game with 2 loops and random number genrator 
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -9,7 +10,7 @@ using namespace std;
 int main(){
     int userNum;
     int i = 0;
-      srand(time(0));
+    srand(time(0));
     int randomNumber = rand() % 50 +1;
     
     cout << "Try to guess the random number between 1 and 50 within 10 tries. " << endl;
