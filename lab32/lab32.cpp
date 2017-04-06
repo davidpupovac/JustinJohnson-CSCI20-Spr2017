@@ -1,6 +1,6 @@
 // created by justin johnson
 // created on 3/28/2017
-// create a guessing game with loops and a random number gernrater 
+// create a guessing game with loops and a random number gernrator
 
 #include <iostream>
 #include <string>

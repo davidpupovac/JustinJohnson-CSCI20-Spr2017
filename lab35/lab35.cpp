@@ -3,7 +3,6 @@
 /* The techniques i used to debugg was read through the code and see what they were trying to do and also discuss with a groupmate what could be wrong. 
 I think both worked very well as we were both able to identify what the was trying to do but was failing to do... 
 it is important because you need to be able to ideitify what is wrong with the code to be able to fix and also understand the code
-
 */
 #include <iostream>
 using namespace std; 
