@@ -1,6 +1,9 @@
 // created by justin johnson
 // created on 4/6/17
-// 
+// creating a game of Rock, Paper, Scissors, Lizard, Spock for the user against the computer useing loops switch case and class.
+// took the "lose or win if statements" from cpluscplus fourm link as follows
+// http://www.cplusplus.com/forum/beginner/124273/
+
 
 #include <iostream>
 #include <cstdlib>
@@ -11,91 +14,226 @@ using namespace std;
 class computerGame{
     public:
         computerGame();  // default constructors
-        computerGame(int scissors, int rock, int paper, int lizard, int spock);
-    
-        void SetScissors();
-        void SetRock();
-        void SetPaper();
-        void SetLizard();
-        void SetSpock();
+        computerGame(int userChoice);
         
-        int GetScissors();
-        int GetRock();
-        int GetPaper();
-        int GetLizard();
-        int GetSpock();
+        
+        void SetRoundsForWin(int gamesPLayed);
+        void SetPlayerChoice(int userChoice);
+        void SetComputerChoice(int computerChoice);
+        
+        int GetRoundsForWin();
+        int GetPlayerChoice();
+        int GetRoundsWon();
+        int GetComputerChoice();
     
     private:
-         int scissors_ ;
-         int rock_ ;
-         int paper_ ;
-         int lizard_ ;
-         int spock_ ;
+        int roundsForWin;
+        int playerChoice_;
+        int playersDecisions;
 };
+// constuctors
+computerGame::computerGame(){
+    playerChoice_ = 1;  // defuat value
+    return;
+}
+computerGame::computerGame( int userChoice){
+    playerChoice_ = userChoice;
+    return;
+}
 
-
-int main(){
-    int userChoice; 
-    srand(time(0));
-    int computerChoice = rand() % 5 +1;  // computers choice
-    int gamesPLayed =0;
-     
-    cout << "Lets play Rock, Paper, Scissors, Lizard, Spock. " << endl;
-    cout << "Chose how many rounds between 3, 5, and 7" << endl;
-    cin >> gamesPLayed; cout << endl;
-    cout << "Chose between 1 for Rock, 2 for Paper, 3 for Scissors, 4 for Lizard or 5 for Spock " << endl;
-    cin >> userChoice; cout << endl;
-     
-for(int i=0; i < gamesPLayed; i++){
+// creates choice for player
+void computerGame::SetPlayerChoice(int userChoice){
     
- switch(userChoice){
+    playerChoice_ = userChoice;  
+  
+ switch(playerChoice_){
     case 1:
         cout << "You chose Rock!"<< endl;
+        playersDecisions =1;
         break;
     case 2:
         cout << "You chose Paper!"<< endl;
         break;
+        playersDecisions =2;
     case 3:
         cout << "You chose Scissors!"<< endl;
+        playersDecisions =3;
         break;
     case 4:
-        cout << "You chose Lizard!"<< endl;
+       cout << "You chose Lizard!"<< endl;
+        playersDecisions = 4;
         break;
     case 5:
         cout << "You chose Spock!"<< endl;
+        playersDecisions = 5;
         break;
-    defalut: 
-        cout << "Restart and chose a correctly" << endl;
-        return 0;
-  }
- switch(computerChoice){
+ 
+}
+}
+// creates choice for computer
+void computerGame::SetComputerChoice(int computerChoice){
+    srand(time(0));  // random numbers
+    computerChoice = rand() % 5 +1;  // computers choice
+    
+     switch(computerChoice){
          case 1:
         cout << "Computer chose Rock!" << endl ;
+        playersDecisions = 1;
         break;
     case 2:
-        cout << "Computer chose Paper!"<< endl;
+       cout << "Computer chose Paper!"<< endl;
+        playersDecisions = 2;
         break;
     case 3:
         cout << "Computer chose Scissors!" << endl;
+        playersDecisions =3;
         break;
     case 4:
-        cout << "Computer chose Lizard!"<< endl;
+       cout << "Computer chose Lizard!"<< endl;
+        playersDecisions = 4;
         break;
     case 5:
-        cout << "Computer chose Spock!"<< endl;
+       cout << "Computer chose Spock!"<< endl;
+        playersDecisions = 5;
         break;
  }
- if(userChoice == computerChoice){
-     cout << "Draw!" << endl;
- }
- 
-    cout << "Round " << i+1 << " is over choose again" << endl; cout << endl;
-    cin >> userChoice;
-    computerChoice = rand() % 5 +1; // ccomputer choses again
- 
-} // closes loop
-  
-    
-    return 0;
+    return;
+}
+// creates round choice for player
+void computerGame::SetRoundsForWin(int gamesPLayed){
+            switch (gamesPLayed) { 
+                case 3:
+                    roundsForWin = 3;
+                    break;
+                case 5:
+                    roundsForWin = 5;
+                    break;
+                case 7:
+                    roundsForWin = 7;
+                    break;
+                // to make them select correct option 
+                default:
+                    gamesPLayed = 0;
+                    
+            }
 }
 
+
+int computerGame::GetComputerChoice(){
+    return playersDecisions;
+}
+int computerGame::GetPlayerChoice(){
+    return playersDecisions;
+}
+int computerGame::GetRoundsForWin(){
+    return roundsForWin;
+}
+
+
+
+int main(){
+  
+   int userChoice= 0;
+    int computerChoice;
+    int gamesPLayed=0;
+    int roundWon = 0;
+    int roundScore = 0;
+
+    computerGame user;
+    computerGame computer;  
+    
+    cout << "Lets play Rock, Paper, Scissors, Lizard, Spock. " << endl;
+    cout << "Chose how many rounds between 3, 5, and 7" << endl;
+    // let player pick rounds
+
+    cin >> gamesPLayed; cout << endl;
+    user.SetRoundsForWin(gamesPLayed);
+    computer.SetRoundsForWin(gamesPLayed);
+    
+  //  cout << "Chose between 1 for Rock, 2 for Paper, 3 for Scissors, 4 for Lizard or 5 for Spock " << endl;
+
+// make the user chose correct amount of rounds through nested conditions
+if(gamesPLayed == 3 || gamesPLayed == 5 || gamesPLayed == 7){
+cout << "Chose between 1 for Rock, 2 for Paper, 3 for Scissors, 4 for Lizard or 5 for Spock " << endl;
+    
+  for(int i = 0; i < gamesPLayed; i++){  // run loop for game
+ 
+    cin >> userChoice;
+    
+  if( userChoice == 1 || userChoice == 2 || userChoice == 3 || userChoice == 4 || userChoice ==5){
+    user.SetPlayerChoice(userChoice);
+    computer.SetComputerChoice(computerChoice);
+  
+
+    // if they chose same option then its a draw
+if(user.GetPlayerChoice() == computer.GetComputerChoice()){
+     cout << "Draw!" << endl;   
+}
+ 
+ // if the user wins round it will run this
+ else if    (( user.GetPlayerChoice() == 3 && computer.GetComputerChoice() == 2 ) ||
+             ( user.GetPlayerChoice() == 1 && computer.GetComputerChoice() == 2 ) ||
+             ( user.GetPlayerChoice() == 1 && computer.GetComputerChoice() == 4 ) ||
+             ( user.GetPlayerChoice() == 4 && computer.GetComputerChoice() == 5 ) ||
+             ( user.GetPlayerChoice() == 5 && computer.GetComputerChoice() == 3 ) ||
+             ( user.GetPlayerChoice() == 3 && computer.GetComputerChoice() == 4 ) ||
+             ( user.GetPlayerChoice() == 4 && computer.GetComputerChoice() == 2 ) ||
+             ( user.GetPlayerChoice() == 2 && computer.GetComputerChoice() == 5 ) ||
+             ( user.GetPlayerChoice() == 5 && computer.GetComputerChoice() == 1 ) ||
+             ( user.GetPlayerChoice() == 1 && computer.GetComputerChoice() == 3 )){
+                 cout << "You have won round " << i +1 << endl; cout << endl;
+                roundWon = roundWon +1;
+  } // closes else if statment
+  
+  // if player loses round it will run this
+   else if  (( user.GetPlayerChoice() == 2 && computer.GetComputerChoice() == 3 ) ||
+             ( user.GetPlayerChoice() == 2 && computer.GetComputerChoice() == 1 ) ||
+             ( user.GetPlayerChoice() == 4 && computer.GetComputerChoice() == 1 ) ||
+             ( user.GetPlayerChoice() == 5 && computer.GetComputerChoice() == 4 ) ||
+             ( user.GetPlayerChoice() == 3 && computer.GetComputerChoice() == 5 ) ||
+             ( user.GetPlayerChoice() == 4 && computer.GetComputerChoice() == 3 ) ||
+             ( user.GetPlayerChoice() == 2 && computer.GetComputerChoice() == 4 ) ||
+             ( user.GetPlayerChoice() == 5 && computer.GetComputerChoice() == 2 ) ||
+             ( user.GetPlayerChoice() == 1 && computer.GetComputerChoice() == 5 ) ||
+             ( user.GetPlayerChoice() == 3 && computer.GetComputerChoice() == 1 )) {
+        cout << "You lost round "<< i+1 << endl; cout << endl;
+        roundScore = roundScore +1 ;
+    } // closes else if statment
+   
+  } // stops the for loop with if statment if they chose wrong
+  
+  // will make them restart if the chose wrong for the [RPSLS] program
+  else if( userChoice !=1 && userChoice != 2 && userChoice != 3 && userChoice != 4 != userChoice && 5){
+   cout <<   "restart and choose correctly ;'(" << endl;
+   return 0;
+ } // close else if statment 
+ 
+} // closes the  for loop 
+
+} // closes the first if statment
+
+// if the chose incorrectly for rounds it will stop and have them restart
+else if( gamesPLayed != 3 && gamesPLayed != 5 ){
+       cout << "restart and choose correctly ;'(" << endl;
+       return 0;
+}
+
+// displays rounds won by user and computer
+cout << " You won " << roundWon << " round(s)." << endl;
+cout << " The Computer won "  << roundScore << " round(s)" << endl;
+   
+    // keeps round score for final outcome
+    if (roundWon  > roundScore) {
+        cout << " You Won the game! :D" << endl;
+    }
+    
+    // keeps round score for final outcome
+    else if (roundWon < roundScore) {
+        cout << " You Lost the game! :P " << endl;
+    }
+    else if (roundWon ==  roundScore ){
+    
+    }
+
+return 0;
+}
