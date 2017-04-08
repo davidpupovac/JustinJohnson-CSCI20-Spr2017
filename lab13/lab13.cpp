@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     int currentPop = 324472000;
-    int popRiseyear = 4*60*24*365 ;
+    int popRiseyear = 4*60*24*365 ; // this is days years calculations
     int years =0;
     
     
@@ -20,7 +20,7 @@ int main()
       int futurePop= currentPop + popRiseyear * years;
     
     cout << "The population for the number of years you selected is " << futurePop << endl;
-    cout << "will test the numbers 99, 26, 8, 13, and 46" << endl;
+   // cout << "will test the numbers 99, 26, 8, 13, and 46" << endl;
     
     
     

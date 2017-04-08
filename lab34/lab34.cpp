@@ -34,11 +34,13 @@ while(randomNumber != userNum){
          
              if( randomNumber == userNum){    // lets user know if number guessed is correct
         cout << "JUST RIGHT! " << endl;
-        return 0;
-    }
+        
+        
+    }    
+         
+     } //closes for loop
     
-    } //closes for loop
-    
-    return 0;
 } // closes while loop
-};
+    //while(randomNumber != userNum);
+    
+}

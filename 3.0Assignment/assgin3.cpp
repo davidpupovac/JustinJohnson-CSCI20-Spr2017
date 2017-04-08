@@ -11,22 +11,25 @@
 using namespace std;
 
 
-class computerGame{
+class computerGame{ // class name
+    // public functions
     public:
         computerGame();  // default constructors
         computerGame(int userChoice);
         
-        
+        // will be set functions
         void SetRoundsForWin(int gamesPLayed);
         void SetPlayerChoice(int userChoice);
         void SetComputerChoice(int computerChoice);
         
+        // will be get functions
         int GetRoundsForWin();
         int GetPlayerChoice();
         int GetRoundsWon();
         int GetComputerChoice();
     
     private:
+        // private variables
         int roundsForWin;
         int playerChoice_;
         int playersDecisions;
@@ -118,7 +121,7 @@ void computerGame::SetRoundsForWin(int gamesPLayed){
             }
 }
 
-
+// get functions
 int computerGame::GetComputerChoice(){
     return playersDecisions;
 }
