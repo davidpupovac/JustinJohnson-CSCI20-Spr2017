@@ -18,7 +18,7 @@ class computerGame{ // class name
         computerGame(int userChoice);
         
         // will be set functions
-        void SetRoundsForWin(int gamesPLayed);
+        void SetRoundsForWin(int gamesPLayed); 
         void SetPlayerChoice(int userChoice);
         void SetComputerChoice(int computerChoice);
         
@@ -31,7 +31,9 @@ class computerGame{ // class name
     private:
         // private variables
         int roundsForWin;
+        // allow player to have choice
         int playerChoice_;
+        // will be players decions
         int playersDecisions;
 };
 // constuctors
@@ -174,7 +176,7 @@ if(user.GetPlayerChoice() == computer.GetComputerChoice()){
 }
  
  // if the user wins round it will run this
- else if    (( user.GetPlayerChoice() == 3 && computer.GetComputerChoice() == 2 ) ||
+  if    (( user.GetPlayerChoice() == 3 && computer.GetComputerChoice() == 2 ) ||
              ( user.GetPlayerChoice() == 1 && computer.GetComputerChoice() == 2 ) ||
              ( user.GetPlayerChoice() == 1 && computer.GetComputerChoice() == 4 ) ||
              ( user.GetPlayerChoice() == 4 && computer.GetComputerChoice() == 5 ) ||
@@ -202,7 +204,7 @@ if(user.GetPlayerChoice() == computer.GetComputerChoice()){
         cout << "You lost round "<< i+1 << endl; cout << endl;
         roundScore = roundScore +1 ;
     } // closes else if statment
-   
+   cout << "Enter anohter guess." << endl;
   } // stops the for loop with if statment if they chose wrong
   
   // will make them restart if the chose wrong for the [RPSLS] program
