@@ -31,7 +31,7 @@ class computerGame{ // class name
     private:
         // private variables
         int roundsForWin;
-        // allow player to have choice
+        // allow player to have choice2
         int playerChoice_;
         // will be players decions
         int playersDecisions;
@@ -143,7 +143,7 @@ int main(){
     int gamesPLayed=0;
     int roundWon = 0;
     int roundScore = 0;
-
+    int numDraw = 0;
     computerGame user;
     computerGame computer;  
     
@@ -204,6 +204,9 @@ if(user.GetPlayerChoice() == computer.GetComputerChoice()){
         cout << "You lost round "<< i+1 << endl; cout << endl;
         roundScore = roundScore +1 ;
     } // closes else if statment
+    else{
+        numDraw = numDraw +1;
+    }
    cout << "Enter anohter guess." << endl;
   } // stops the for loop with if statment if they chose wrong
   
@@ -224,8 +227,9 @@ else if( gamesPLayed != 3 && gamesPLayed != 5 ){
 }
 
 // displays rounds won by user and computer
-cout << " You won " << roundWon << " round(s)." << endl;
-cout << " The Computer won "  << roundScore << " round(s)" << endl;
+cout << "You won " << roundWon << " round(s)." << endl;
+cout << "The Computer won "  << roundScore << " round(s)" << endl;
+cout <<  numDraw << " Draw(s)!" << endl;
    
     // keeps round score for final outcome
     if (roundWon  > roundScore) {
@@ -234,11 +238,14 @@ cout << " The Computer won "  << roundScore << " round(s)" << endl;
     
     // keeps round score for final outcome
     else if (roundWon < roundScore) {
+      
         cout << " You Lost the game! :P " << endl;
     }
     else if (roundWon ==  roundScore ){
     
     }
+        
+    
 
 return 0;
 }

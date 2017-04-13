@@ -27,7 +27,7 @@ class ArrayTools{
         int GetIs_sorted();
         
     private:
-         int single_ = 0;
+         int single_ = [10];
 };
 
  ArrayTools::ArrayTools(){
