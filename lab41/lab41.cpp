@@ -10,7 +10,8 @@ using namespace std;
 class ArrayTools{
     
     public:
-        ArrayTools();
+        ArrayTools(); // constructors
+        ArrayTools(int single[]);
         
         void SetPrint();
         void SetFind_min();
