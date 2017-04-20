@@ -32,14 +32,18 @@ class ArrayTools{
 };
 
  ArrayTools::ArrayTools(){
-     
+     single_[i] = single[i]
     return;
 }
 void ArrayTools::SetPrint(){
-    
+    cout << "Array Values: ";
+    for (int i = 0; i < 10; i++) { 
+    cout << array_[i] ;     
 }
 void ArrayTools::SetFind_min(){
-    
+
+            
+}
 }
 void ArrayTools::SetFind_max(){
     
