@@ -15,16 +15,28 @@ int main(){
     // one extra number for the nill character
     const int size1 = 11;
     const int size2 = 21;
-    
     char firstName[size1] ; // first name
     char lastName[size2] ;  // lastname
     int username; // will allow choice for username
 
      cout << "Enter your first name (10 or less characters)" << endl;
      cin.getline(firstName,size1);  // input for first name
-     
+
      cout << "Enter you last name now (20 or less characters)" << endl;
-     cin.getline(lastName,size2); // input for lasname
+     cin.getline(lastName,size2); // input for last name
+     
+     // if names are more than char allowed then have them re-enter names
+     if((strlen(firstName) > size1) || (strlen(lastName) > size2 )){
+         //use loop to re-enter names
+        do {             
+            cout << " name more the 10 character" << endl;
+            cout << "enter first name again." << endl;
+            cin.getline(firstName,size1);  // input for first name
+            cout << "enter last name." << endl;
+            cin.getline(lastName,size2); // input for last name
+            
+        } while((strlen(firstName) > size1) ||(strlen(lastName) > size2) );
+} // closes if statment 
      
  // if first and last name are same will make them re-enter names
 if(strcmp(firstName,lastName) ==0){
@@ -43,7 +55,7 @@ if(strcmp(firstName,lastName) ==0){
      cout << endl << "Which usernames would you like? Choose the number by name:" << endl << "1: ";
 for (int i = 0; i < 2; i++) { 
     cout << firstName[i];
-    outPutUsername = firstName[i];
+   
 }
     cout << lastName << endl << "2: ";
 for (int i = 0; firstName[i] != '\0'; i++) { 
