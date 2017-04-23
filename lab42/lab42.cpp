@@ -1,6 +1,6 @@
 // created by Justin Johnson
 // created on 4/13/17
-// using a class and parrel arrays will keep trak of peoples price and show them how much they owe for items selected
+// using a class and parrel arrays will keep track of peoples price and show them how many items selected
 
 #include <iostream>
 #include <cstdlib>
@@ -19,7 +19,9 @@ int main(){
     
     
     // outputs items
+   
     cout << "Invortory items are as follows" << endl;
+    cout <<  "we have 10 of each item in stock" << endl;
     cout << "1) item: " << item[0] << ", Price: $" << itemPrice[0] << endl;
     cout << "2) item: " << item[1] << ", Price: $" << itemPrice[1] << endl;
     cout << "3) item: " << item[2] << ", Price: $" << itemPrice[2] << endl;
@@ -31,7 +33,6 @@ int main(){
     cout << "9) item: " << item[8] << ", Price: $" << itemPrice[8] << endl;
     cout << "10) item: " << item[9] << ", Price: $" << itemPrice[9] << endl;
     
-    cout << " we have 10 of each item in stock" << endl;
     cout << "Chose what items you would like by there number" << endl;
     cout << "Press -1 when done" << endl; 
 
@@ -110,6 +111,7 @@ while(itemNumber != -1){
   if(itemInventory[itemNumber] == 0){
     do{
         cout << "Out of stock" << endl;
+        cout << " enter a differnt number then enter it again." << endl;
         cin >> itemNumber;
     }while(itemInventory[itemNumber] == 0);
      }  
@@ -119,5 +121,6 @@ while(itemNumber != -1){
 }
     cout << "Total Items selected: "<< totalItems << endl;
     cout << "Total cost $" << totalCost; 
+    
     return 0;
 }
