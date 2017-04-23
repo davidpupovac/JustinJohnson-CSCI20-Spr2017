@@ -8,7 +8,6 @@
 #include <cstring>
 using namespace std;
 
-
 int main(){
     
     // last name and first name
@@ -29,7 +28,7 @@ int main(){
      if((strlen(firstName) > size1) || (strlen(lastName) > size2 )){
          //use loop to re-enter names
         do {             
-            cout << " name more the 10 character" << endl;
+            cout << "one of the names is more than allowed" << endl;
             cout << "enter first name again." << endl;
             cin.getline(firstName,size1);  // input for first name
             cout << "enter last name." << endl;

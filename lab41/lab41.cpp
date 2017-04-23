@@ -28,22 +28,22 @@ class ArrayTools{
         int GetIs_sorted();
         
     private:
-         int single_ = [10];
+         int array_[10];
 };
 
  ArrayTools::ArrayTools(){
      single_[i] = single[i]
     return;
 }
+// print function
 void ArrayTools::SetPrint(){
     cout << "Array Values: ";
-    for (int i = 0; i < 10; i++) { 
+    for(int i = 0; i < 10; i++) { 
     cout << array_[i] ;     
-}
+}}
 void ArrayTools::SetFind_min(){
 
             
-}
 }
 void ArrayTools::SetFind_max(){
     
