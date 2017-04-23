@@ -48,71 +48,71 @@ while(itemNumber != -1){
     switch(itemNumber){
         case 1: 
             
-            itemInventory[0] = itemInventory[0] - 1;
-            cout <<"Popcorn Invortory:" << itemInventory[0] << endl;
+            itemInventory[itemNumber] = itemInventory[itemNumber] - 1;
+            cout <<"Popcorn Invortory:" << itemInventory[itemNumber] << endl;
             totalCost += 3;
                 break;
         case 2:
             
-            itemInventory[1] = itemInventory[1]-1;
-            cout << "pencils Invortory:" << itemInventory[1] << endl;
+            itemInventory[itemNumber] = itemInventory[itemNumber]-1;
+            cout << "pencils Invortory:" << itemInventory[itemNumber] << endl;
             totalCost += 3;
                 break;
         case 3: 
             
-            itemInventory[2] = itemInventory[2] - 1;
-            cout <<"paper Invortory:" << itemInventory[2] << endl;
+            itemInventory[itemNumber] = itemInventory[itemNumber] - 1;
+            cout <<"paper Invortory:" << itemInventory[itemNumber] << endl;
             totalCost += 3;
                 break;
         case 4: 
            
-            itemInventory[3] = itemInventory[3] - 1;
-            cout <<"coffee Invortory:" << itemInventory[3]<< endl;
+            itemInventory[itemNumber] = itemInventory[itemNumber] - 1;
+            cout <<"coffee Invortory:" << itemInventory[itemNumber]<< endl;
             totalCost += 3;
                 break;
         case 5: 
             
-            itemInventory[4] = itemInventory[4] - 1;
-            cout <<"shoes Invortory:" << itemInventory[4]<< endl;
+            itemInventory[itemNumber] = itemInventory[itemNumber] - 1;
+            cout <<"shoes Invortory:" << itemInventory[itemNumber]<< endl;
             totalCost += 60;  
                 break;
         case 6: 
            
-            itemInventory[5] = itemInventory[5] - 1;
-            cout <<"shirt Invortory:" << itemInventory[5]<< endl;
+            itemInventory[itemNumber] = itemInventory[itemNumber] - 1;
+            cout <<"shirt Invortory:" << itemInventory[itemNumber]<< endl;
             totalCost += 60;
                 break;
         case 7: 
             
-            itemInventory[6] = itemInventory[6] - 1;
-            cout <<"glasses Invortory:" << itemInventory[6]<< endl;
+            itemInventory[itemNumber] = itemInventory[itemNumber] - 1;
+            cout <<"glasses Invortory:" << itemInventory[itemNumber]<< endl;
             totalCost += 60;
                 break;
         case 8: 
             
-            itemInventory[7] = itemInventory[7] - 1;
-            cout <<"oil Invortory:" << itemInventory[7]<< endl;
+            itemInventory[itemNumber] = itemInventory[itemNumber] - 1;
+            cout <<"oil Invortory:" << itemInventory[itemNumber]<< endl;
             totalCost += 10;
                 break;
         case 9: 
            
-            itemInventory[8] = itemInventory[8] - 1;
-            cout <<"hat Invortory:" << itemInventory[8]<< endl;
+            itemInventory[itemNumber] = itemInventory[itemNumber] - 1;
+            cout <<"hat Invortory:" << itemInventory[itemNumber]<< endl;
             totalCost += 10;
                 break;
         case 10: 
         
-            itemInventory[9] = itemInventory[9] - 1;
-            cout <<"juice Invortory:" << itemInventory[9]<< endl;
+            itemInventory[itemNumber] = itemInventory[itemNumber] - 1;
+            cout <<"juice Invortory:" << itemInventory[itemNumber]<< endl;
             totalCost += 10;
                 break;
     }
- /* if(itemInventory[itemNumber] == 1){
+  if(itemInventory[itemNumber] == 0){
     do{
         cout << "Out of stock" << endl;
         cin >> itemNumber;
-    }while(itemInventory[itemNumber] == 1);
-     }  */
+    }while(itemInventory[itemNumber] == 0);
+     }  
      
      totalItems +=1;
      
