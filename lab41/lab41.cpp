@@ -13,13 +13,6 @@ class ArrayTools{
         ArrayTools(); // constructors
         ArrayTools(int single[]);
         
-        void SetPrint();
-        void SetFind_min();
-        void SetFind_max();
-        void SetFind_sum();
-        void SetSerch();
-        void SetIs_sorted();
-        
         int GetPrint();
         int GetFind_min();
         int GetFind_max();
@@ -41,21 +34,6 @@ void ArrayTools::SetPrint(){
     for(int i = 0; i < 10; i++) { 
     cout << array_[i] ;     
 }}
-void ArrayTools::SetFind_min(){
-
-            
-}
-void ArrayTools::SetFind_max(){
-    
-}
-void ArrayTools::SetFind_sum(){
-    
-}
-void ArrayTools::SetSerch(){
-    
-}
-void ArrayTools::SetIs_sorted(){
-    
 }
 int ArrayTools::GetPrint(){
     

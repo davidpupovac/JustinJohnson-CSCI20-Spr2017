@@ -34,10 +34,10 @@ int main(){
     cout << "10) item: " << item[9] << ", Price: $" << itemPrice[9] << endl;
     
     cout << "Chose what items you would like by there number" << endl;
-    cout << "Press -1 when done" << endl; 
+    cout << "Press 0 when done" << endl; 
 
     // let them make multi choices
-while(itemNumber != -1){
+while(itemNumber != 0){
     cin >> itemNumber;
     
     if (itemNumber > 10) {
@@ -103,8 +103,8 @@ while(itemNumber != -1){
                 break;
         case 10: 
         
-            itemInventory[itemNumber] = itemInventory[itemNumber] - 1;
-            cout <<"juice Invortory:" << itemInventory[itemNumber]<< endl;
+            itemInventory[9] = itemInventory[9] - 1;
+            cout <<"juice Invortory:" << itemInventory[9]<< endl;
             totalCost += 10;
                 break;
     }
@@ -114,6 +114,14 @@ while(itemNumber != -1){
         cout << " enter a differnt number then enter it again." << endl;
         cin >> itemNumber;
     }while(itemInventory[itemNumber] == 0);
+    
+     }
+   else if(itemInventory[9] == 0){
+        do{
+            cout << "Out of stock" << endl;
+            cout << " enter a differnt number then enter it again." << endl;
+            cin >> itemNumber;
+        }while(itemInventory[9] == 0);
      }  
      
      totalItems +=1;
