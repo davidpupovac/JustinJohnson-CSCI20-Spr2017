@@ -11,7 +11,7 @@ class ArrayTools{
     
     public:
         ArrayTools(); // constructors
-        ArrayTools(int single[]);
+        ArrayTools(int array[]);
         
         int GetPrint();
         int GetFind_min();
@@ -25,7 +25,7 @@ class ArrayTools{
 };
 
  ArrayTools::ArrayTools(){
-     single_[i] = single[i]
+     array_[i] = array[i]
     return;
 }
 // print function

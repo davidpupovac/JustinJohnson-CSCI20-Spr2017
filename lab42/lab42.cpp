@@ -107,23 +107,24 @@ while(itemNumber != 0){
             cout <<"juice Invortory:" << itemInventory[9]<< endl;
             totalCost += 10;
                 break;
+        default:
+        cout << ":( " << endl;
     }
-  if(itemInventory[itemNumber] == 0){
+  if(itemInventory[itemNumber] < 1){
     do{
         cout << "Out of stock" << endl;
         cout << " enter a differnt number then enter it again." << endl;
         cin >> itemNumber;
-    }while(itemInventory[itemNumber] == 0);
-    
-     }
-   else if(itemInventory[9] == 0){
-        do{
-            cout << "Out of stock" << endl;
-            cout << " enter a differnt number then enter it again." << endl;
-            cin >> itemNumber;
-        }while(itemInventory[9] == 0);
-     }  
-     
+    }while(itemInventory[itemNumber] < 1);
+  } // closes if statment
+  
+else if(itemInventory[9] < 1){
+    do{
+        cout << "Out of stock" << endl;
+        cout << " enter a differnt number then enter it again." << endl;
+        cin >> itemNumber;
+    }while(itemInventory[itemNumber] < 1);
+}
      totalItems +=1;
      
 }
