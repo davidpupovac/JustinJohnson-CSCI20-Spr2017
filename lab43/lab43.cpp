@@ -5,7 +5,7 @@ using namespace std;
 //SIZE Variable = 10
 const int SIZE = 10;
 
-//Class 
+//Class Shopping Cart:
 class ShoppingCart {
     
    
