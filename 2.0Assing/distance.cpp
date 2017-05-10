@@ -77,7 +77,7 @@ int main(){
     cin >> miles;
      distanceMiles.SetConversionToMiles(miles);
      distanceMiles.PrintDistance();
-    cout << endl;
+     cout << endl;
     
     DistanceConversion distanceYards;
     cout << "Now enter the distance for yards: " ;
