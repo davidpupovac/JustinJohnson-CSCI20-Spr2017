@@ -34,7 +34,7 @@ int main(){
             cout << "enter last name." << endl;
             cin.getline(lastName,size2); // input for last name
             
-        } while((strlen(firstName) > size1) ||(strlen(lastName) > size2) );
+        } while((strlen(firstName) > size1) || (strlen(lastName) > size2) );
 } // closes if statment 
      
  // if first and last name are same will make them re-enter names

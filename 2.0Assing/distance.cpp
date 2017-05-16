@@ -38,13 +38,13 @@ void DistanceConversion::SetConversionToMiles(double miles){
     miles_ = miles;
 }
 void DistanceConversion::SetConversionToYards(double yards){
-    miles_ = (yards *0.000568182);
+    miles_ = (yards * 0.000568182);
 }
 void DistanceConversion::SetConversionTofeet(double feet){
     miles_ = feet * 0.00018939;
 }
 void DistanceConversion::SetConversionToInches(double inches){
-    miles_ = inches * 63360;
+    miles_ = inches * 0.000015783;
 }
 double DistanceConversion::GetConversionToMiles(){
     return miles_;
