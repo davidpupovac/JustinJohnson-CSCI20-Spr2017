@@ -169,6 +169,7 @@ while( inFile >> words){
                     words = "";
                }
             cout << word[j].GetFileWord() << endl;
+            outFile << word[j].GetFileWord() << endl;
             j = numWords + 1;
             }
     }
