@@ -156,6 +156,8 @@ int main(){
     cout << "pick for X postion" << endl;
     cin >> pickX;
 
+    outFile << "your guess for Y is and for X you chose " << endl;
+    outFile << "(" << pickY <<", " << pickX << ")" << endl;
 // if true will tell you you guessed right
 if(guess(pickX,pickY) ){
     cout << "You Guessed correctly!" << endl;
