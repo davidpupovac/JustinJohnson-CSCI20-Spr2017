@@ -144,6 +144,7 @@ int main(){
     int roundWon = 0;
     int roundScore = 0;
     int numDraw = 0;
+    
     computerGame user;
     computerGame computer;  
     

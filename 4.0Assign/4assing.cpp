@@ -52,6 +52,7 @@ concordance::concordance(string words , int countWord, int wordLocation){ // ove
 }
 void concordance::SetFileWord(string words){
    word_ = words;
+   return;
 }
 string concordance::GetFileWord(){
    return word_;
