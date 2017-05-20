@@ -40,9 +40,7 @@ class game{
     int newRows_;
     int newColumns_;
     int X; int Y;
-    
     int newBoard_[rows][columns];
-    int win_,lose_;
     
     
 };
@@ -132,6 +130,7 @@ int main(){
     cout << "This is a guessing game " << endl;
     cout << "You need to guess where the computer has placed the 1 by putting in and x and y corrdiantes" << endl;
     cout << "You will Have 16 guesses" << endl;
+    cout <<"If want to know where the number is you can look at the output file to see "
     
         // creates the board and sets a random 1 in the program
     for(int i = 0; i < rows; i++){
