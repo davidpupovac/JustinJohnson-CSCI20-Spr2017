@@ -49,8 +49,6 @@ game::game(){
     newRows_ = 0;
     newColumns_ = 0;
     newBoard_[rows][columns] ;
-    win_ = 0;
-    lose_ = 0;
     
 }
 // overloaded constructor
@@ -58,8 +56,6 @@ game::game(int lose, int win, int x, int y, int board[rows][columns]){
     newRows_ = rows;
     newColumns_ = columns;
     newBoard_[newRows_][newColumns_] = board[rows][columns];
-    lose_ = lose;
-    win_ = win;
     X = x;
     Y = y;
 }
@@ -129,8 +125,8 @@ int main(){
     
     cout << "This is a guessing game " << endl;
     cout << "You need to guess where the computer has placed the 1 by putting in and x and y corrdiantes" << endl;
-    cout << "You will Have 16 guesses" << endl;
-    cout <<"If want to know where the number is you can look at the output file to see "
+    cout << "You will Have 15 guesses" << endl;
+    cout <<"If want to know where the number is you can look at the output file to see " << endl << endl;
     
         // creates the board and sets a random 1 in the program
     for(int i = 0; i < rows; i++){
@@ -152,7 +148,7 @@ int main(){
     } 
     
     // for amount of guesses
-    for(int k = 15; k > 0; k--){
+    for(int k = 15; k > -1; k--){
     
     // allow pick for guess
     cout << "please pick a number between 0 - 9 for Y postion" << endl;
