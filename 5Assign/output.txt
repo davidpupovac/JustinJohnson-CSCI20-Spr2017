@@ -4,20 +4,17 @@
 0 0 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 1 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 1 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
 -------------------
 your guess for Y is and for X you chose 
-(8, 1)
+(8, 0)
 That is not the correct corrdinates!
 your guess for Y is and for X you chose 
-(1, 2)
+(7, 6)
 That is not the correct corrdinates!
 your guess for Y is and for X you chose 
-(1, 1)
-That is not the correct corrdinates!
-your guess for Y is and for X you chose 
-(8, 5)
+(6, 4)
 That guess was correct!

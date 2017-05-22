@@ -125,9 +125,9 @@ int main(){
     game game2[rows][columns];
     
     cout << "This is a guessing game " << endl;
-    cout << "You need to guess where the computer has placed the 1 by putting in and x and y corrdiantes" << endl;
+    cout << "You need to guess where the computer has placed the 1 by putting in and y and x corrdiantes in that order" << endl;
     cout << "You will Have 15 guesses" << endl;
-    cout <<"If want to know where the number is you can look at the output file to see " << endl << endl;
+    cout <<"If want to know where the number is you can look at the output file  " << endl << endl;
     
         // creates the board and sets a random 1 in the program
     for(int i = 0; i < rows; i++){
