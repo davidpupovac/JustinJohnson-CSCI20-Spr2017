@@ -1,6 +1,7 @@
 // created by justin johnson
 // created on may 18, 2017
 // it is a guessing game that uses randum numbers to be put place in a 2d array that is 10x10 using a class and arrays
+// if you pick a number that is to big or to small it will make you re-chose the numbers
 
 
 #include <iostream>
@@ -105,22 +106,22 @@ bool guess(int x, int y){
 }
 
 int main(){
-
-    int userPick[rows][columns];
+    
+    // vars for user input
     int pickY, pickX;
+    // var for creating the board
+    int board[rows][columns];
 
     srand(time(0));
     // for random placment
     int x = rand() % rows;
     int y = rand() % columns;
 
-
-    int board[rows][columns];
-    
+    // open output file
     ofstream outFile;
     outFile.open("output.txt");
     
-    // object from class
+    // create object from game class
     game game2[rows][columns];
     
     cout << "This is a guessing game " << endl;
@@ -146,45 +147,51 @@ int main(){
         }
            outFile << endl;
     } 
+    outFile << "-------------------" << endl;
     
     // for amount of guesses
     for(int k = 15; k > -1; k--){
     
-    // allow pick for guess
-    cout << "please pick a number between 0 - 9 for Y postion" << endl;
-    cin >> pickY; 
-    cout << "pick for X postion" << endl;
-    cin >> pickX;
-
+    do
+    {
+        // allow pick for guess
+        cout << "please pick a number between 0 - 9 for Y postion" << endl;
+        cin >> pickY; 
+        cout << "pick for X postion" << endl;
+        cin >> pickX;
+    } while( pickY < 0 || pickY > 9 || pickX < 0 || pickX > 9);
+    
+    // out puts the guess to the file
     outFile << "your guess for Y is and for X you chose " << endl;
     outFile << "(" << pickY <<", " << pickX << ")" << endl;
+    
 // if true will tell you you guessed right
-if(guess(pickX,pickY) ){
-    cout << "You Guessed correctly!" << endl;
+ if(guess(pickX,pickY) ){
+    cout << "That guess was correct!" << endl;
+    outFile << "That guess was correct!" << endl;
     exit(0);
-} // closes if statment
+ } // closes if statment
 
-else{
-
+ else{
 
     cout << " That is not the correct corrdinates!" << endl;
+    outFile << "That is not the correct corrdinates!" << endl;
     cout << "You Have " << k << " guesses left " << endl;
     
-        for(int i = 0; i < rows; i++){
-            for(int j = 0; j < columns; j++){
-            // clears board
-            game2[i][j].SetClearBoard(board);
+    //     for(int i = 0; i < rows; i++){
+    //         for(int j = 0; j < columns; j++){
             
-            // sets random number
-            game2[x][y].SetRandomSpawn(x,y);
-            game2[x][y].GetRandomSpawn();
-        }
-    }
+    //         game2[i][j].SetClearBoard(board);
+            
+    //         // sets random number
+    //         game2[x][y].SetRandomSpawn(x,y);
+    //         game2[x][y].GetRandomSpawn();
+    //     }
+    // }
 } // closes else statment
 
-} // close first array to count guesses
+ } // close first array to count guesses
 
-    
     
 return 0;
 }
