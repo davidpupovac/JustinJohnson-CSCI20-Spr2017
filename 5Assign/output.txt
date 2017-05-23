@@ -1,20 +1,11 @@
+0 0 0 0 0 0 0 1 0 0 
 0 0 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 1 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 0 
 -------------------
-your guess for Y is and for X you chose 
-(8, 0)
-That is not the correct corrdinates!
-your guess for Y is and for X you chose 
-(7, 6)
-That is not the correct corrdinates!
-your guess for Y is and for X you chose 
-(6, 4)
-That guess was correct!

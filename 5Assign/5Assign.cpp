@@ -3,6 +3,43 @@
 // it is a guessing game that uses randum numbers to be put place in a 2d array that is 10x10 using a class and arrays
 // if you pick a number that is to big or to small it will make you re-chose the numbers
 
+//Pseudocode:
+/*
+Pseudocode:
+start program
+variable  //  have some constant valuses 
+create class
+class name {
+private variables; // create my private variables 
+set and get functions. // public functions
+}
+setfunctions() // borad and other neeed functions
+getFunctions() // get those functions
+start main func:
+create additnatl variables;
+int valuses  // also create variable to allow user input and functions
+Create and open files 
+Name name[var][var] ; // create object name from class
+Output info to the user
+Use array and loops to create board
+For(contionds){
+Set and get functions for board
+}
+set an loop for number of guesses
+for(condition){
+have user input
+cin >> user input 
+say how many guesses are left
+have if statement that uses bool
+if(bool is true){
+promt user they’ve won
+}
+else{
+have user repeat till they get it right of guesses run out
+}
+}
+*/
+
 
 #include <iostream>
 #include <cstdlib>
